@@ -8,6 +8,8 @@ return new Promise((resolve,reject) =>{
 	},2000);
 });
 }
+promises.push(first);
+
 function second second () {
 return new Promise((resolve,reject) =>{
 	setTimeout(()=>{
@@ -15,6 +17,10 @@ return new Promise((resolve,reject) =>{
 	},3000);
 });
 }
+promises.push(second);
+
+
+
 function third() {
 return new Promise((resolve,reject) =>{
 	setTimeout(()=>{
@@ -22,6 +28,8 @@ return new Promise((resolve,reject) =>{
 	},1000);
 });
 }
+promises.push(third);
+
 function fourth() {
 return new Promise((resolve,reject) =>{
 	setTimeout(()=>{
@@ -29,6 +37,8 @@ return new Promise((resolve,reject) =>{
 	},4000);
 });
 }
+promises.push(fourth);
+
 function fifth() {
 return new Promise((resolve,reject) =>{
 	setTimeout(()=>{
@@ -37,10 +47,12 @@ return new Promise((resolve,reject) =>{
 });
 }
 
-Promise.any([promeis1,promis2,promeis3]).then((res)=>{
+
+promises.push(fifth);
+Promise.any(promises).then((res)=>{
 
 
-    console.log("any one will work>>>",res,new Date());
+    
 document.getElementById("output").innerHTML=res;
 
  });
