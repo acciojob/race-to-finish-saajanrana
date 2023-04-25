@@ -10,7 +10,7 @@ return new Promise((resolve,reject) =>{
 }
 promises.push(first);
 
-function second second () {
+function second () {
 return new Promise((resolve,reject) =>{
 	setTimeout(()=>{
 		resolve("second Promise");
